@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextInput, StyleSheet } from 'react-native';
 
-const DefaultInput = ({ styles: extraStyles, placeholder, ...rest }) => (
+const DefaultInput = ({ style: extraStyles, placeholder, ...rest }) => (
   <TextInput
     placeholder={placeholder}
     style={[styles.input, extraStyles]}
