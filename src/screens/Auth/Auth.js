@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View, Button, StyleSheet, ImageBackground } from 'react-native';
-
+import { Text, View, StyleSheet, ImageBackground } from 'react-native';
 import { DefaultInput } from './../../components/UI/Inputs';
 import { Head1, TextMod } from './../../components/UI/Text';
+import { Button } from './../../components/UI/Buttons';
 import startMainTabs from './../MainTabs/startMainTabs';
 import image from './../../assets/pexels-photo-556666.jpeg';
 
@@ -23,6 +23,9 @@ class AuthScreen extends Component {
           <TextMod>
             <Head1>Please Sign Up!</Head1>
           </TextMod>
+          <Button color="#29aff4" onPress={() => alert('EFFEN Kidden')}>
+            Switch to Login!
+          </Button>
           <View style={styles.inputContainer}>
             <DefaultInput
               placeholder="Your E-mail address."
@@ -31,7 +34,9 @@ class AuthScreen extends Component {
             <DefaultInput placeholder="Confirm Password" style={styles.input} />
             <DefaultInput placeholder="Password" style={styles.input} />
           </View>
-          <Button title="Login" onPress={this.loginHandler} />
+          <Button color="#29aff4" onPress={this.loginHandler}>
+            Login
+          </Button>
         </View>
       </ImageBackground>
     );
