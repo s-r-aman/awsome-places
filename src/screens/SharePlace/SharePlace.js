@@ -9,9 +9,10 @@ import {
   ScrollView,
   Image
 } from 'react-native';
-import { DefaultInput } from './../../components/UI/Inputs';
+import PlaceInput from './../../components/PlaceInput/PlaceInput';
+import PickImage from './../../components/PickImage/PickImage';
+import PickLocation from './../../components/PickLocation/PickLocation';
 import { Head1, TextMod } from './../../components/UI/Text';
-import image from './../../assets/beautiful-place.jpg';
 import { addPlace } from './../../store/actions/index.js';
 
 class SharePlaceScreen extends Component {
@@ -40,19 +41,9 @@ class SharePlaceScreen extends Component {
           <Head1 style={style.heading}>
             <TextMod>Share A Place With Us!</TextMod>
           </Head1>
-          <View style={style.placeHolder}>
-            <Image source={image} style={style.image} />
-          </View>
-          <View style={style.button}>
-            <Button title="Pick Image" />
-          </View>
-          <View style={style.placeHolder}>
-            <Text>Map Preview!</Text>
-          </View>
-          <View style={style.button}>
-            <Button title="Locate Me" />
-          </View>
-          <DefaultInput placeholder="Place name." />
+          <PickImage />
+          <PickLocation />
+          <PlaceInput />
           <View style={style.button}>
             <Button title="Share the place." />
           </View>
