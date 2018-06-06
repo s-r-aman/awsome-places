@@ -9,11 +9,11 @@ import {
   ScrollView,
   Image
 } from 'react-native';
-import PlaceInput from './../../components/PlaceInput/PlaceInput';
-import PickImage from './../../components/PickImage/PickImage';
-import PickLocation from './../../components/PickLocation/PickLocation';
-import { Head1, TextMod } from './../../components/UI/Text';
-import { addPlace } from './../../store/actions/index.js';
+// import PlaceInput from './../../components/PlaceInput/PlaceInput';
+// import PickImage from './../../components/PickImage/PickImage';
+// import PickLocation from './../../components/PickLocation/PickLocation';
+// import { Head1, TextMod } from './../../components/UI/Text';
+// import { addPlace } from './../../store/actions/index.js';
 
 class SharePlaceScreen extends Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class SharePlaceScreen extends Component {
   placeNameChangedHandler = val => {
     this.setState(() => ({
       placeName: val
-    }))
+    }));
   };
 
   placeAddHandler = () => {
@@ -48,15 +48,15 @@ class SharePlaceScreen extends Component {
     return (
       <ScrollView>
         <View style={style.container}>
-          <Head1 style={style.heading}>
+          {/* <Head1 style={style.heading}>
             <TextMod>Share A Place With Us!</TextMod>
           </Head1>
           <PickImage />
-          <PickLocation />
-          <PlaceInput placeName={this.state.placeName} />
-          <View style={style.button}>
+          <PickLocation /> */}
+          {/* <PlaceInput placeName={this.state.placeName} /> */}
+          {/* <View style={style.button}>
             <Button title="Share the place." onPress={this.placeAddHandler} />
-          </View>
+          </View> */}
         </View>
       </ScrollView>
     );
